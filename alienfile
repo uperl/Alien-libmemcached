@@ -1,12 +1,16 @@
 use alienfile;
-plugin 'PkgConfig' => 'libfoo';
+plugin 'PkgConfig' => 'libmemcached';
 share {
   plugin Download => (
-    url => 'http://...',
-    filter => qr/*\.tar\.gz$/,
-    version => qr/([0-9\.]+)/,
+    url => 'https://launchpad.net/libmemcached/1.0/1.0.18/+download/libmemcached-1.0.18.tar.gz',
+    #url => 'https://launchpad.net/libmemcached/+download',
+    #filter => qr/libmemcached.*\.tar\.gz$/,
+    #version => qr/([0-9\.]+)/,
   );
   plugin Extract => 'tar.gz';
+
+  patch ['%{patch} -p1 < %{.install.patch}/fix-gcc7-build.diff'];
+  
   plugin 'Build::Autoconf';
 };
 
