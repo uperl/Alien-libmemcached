@@ -16,6 +16,7 @@ $modules{$_} = $_ for qw(
   ExtUtils::MakeMaker
   Test2::V0
   Test::Alien
+  Test::Alien::Diag
 );
 
 

@@ -1,8 +1,10 @@
 use Test2::V0 -no_srand => 1;
 use Alien::libmemcached;
 use Test::Alien;
+use Test::Alien::Diag qw( alien_diag );
 
 alien_ok 'Alien::libmemcached';
+alien_diag 'Alien::libmemcached';
 
 my $xs = q{
 
