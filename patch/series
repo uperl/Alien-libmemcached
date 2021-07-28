@@ -1,0 +1,7 @@
+m4_pthread.patch
+fix_spelling.patch
+hurd.patch
+c++11.patch
+move-ax_confix_aux_dir.patch
+no-docs-no-man.diff
+fix-gcc7-build.diff
