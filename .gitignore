@@ -2,4 +2,7 @@ Alien-libmemcached-*
 /.build/
 *.swp
 
-
+/Alien-libmemcached-*
+/.build
+*.old
+*.orig
